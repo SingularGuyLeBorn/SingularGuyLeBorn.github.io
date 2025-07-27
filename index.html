@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+
+    <!-- KaTeX for Math Formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Marked.js for Markdown Parsing -->
+    <script src="./marked.min.js" defer></script>
+
+    <!-- KaTeX JS and its auto-render extension -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" defer></script>
+
+    <!-- Marked KaTeX Extension -->
+    <script src="https://cdn.jsdelivr.net/npm/marked-katex-extension@1.1.1/lib/index.umd.js" defer></script>
+
+    <!-- NEW: Slugify library for generating URL-friendly IDs from titles -->
+    <script src="https://cdn.jsdelivr.net/npm/slugify@1.6.6/slugify.min.js" defer></script>
+
+    <!-- Main Interaction Script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="page-container">
+    <!-- Top Header Bar -->
+    <header class="page-header">
+        <button id="sidebar-toggle" class="header-button" title="切换侧边栏">
+            <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </button>
+        <nav id="top-nav" class="top-nav"></nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Left File Browser Sidebar -->
+        <aside id="file-browser-container" class="sidebar left-sidebar">
+            <div id="file-browser" class="file-browser-content"></div>
+        </aside>
+
+        <!-- Middle Content Viewer -->
+        <main id="content-viewer" class="content-viewer">
+            <div id="welcome-message" class="welcome-message">
+                <h2>欢迎来到我的知识库</h2>
+                <p>请从顶部或左侧选择一个主题开始探索</p>
+            </div>
+        </main>
+
+        <!-- Right Table of Contents Sidebar -->
+        <aside id="toc-container" class="sidebar right-sidebar">
+            <h4>本页大纲</h4>
+            <div id="toc-list"></div>
+        </aside>
+    </div>
+</div>
+
+</body>
+</html>
